@@ -1,105 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isha Shah | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isha Shah | AI + Full-Stack Portfolio</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Isha Shah — MS CS @ Rutgers. I build AI-powered products (RAG, LLM apps, deep learning) and ship full-stack experiences with React + Flask." />
+  <meta name="keywords" content="Isha Shah, AI, Machine Learning, LLM, RAG, LangChain, Gemini, React, Flask, Rutgers" />
+  <meta name="author" content="Isha Shah" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Isha Shah | AI + Full-Stack Portfolio" />
+  <meta property="og:description" content="AI/ML + full-stack builder. Projects in RAG-based legal assistants, EdTech automation, and real-time behavior monitoring." />
+  <meta property="og:type" content="website" />
+  <!-- Optional: set once you add an image in your repo -->
+  <!-- <meta property="og:image" content="https://ishashah2303.github.io/assets/og.png" /> -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    /* Smooth scrolling + nicer selection */
+    html { scroll-behavior: smooth; }
+    ::selection { background: rgba(59, 130, 246, 0.35); }
+    /* Subtle gradient background noise */
+    .bg-grid {
+      background-image:
+        radial-gradient(circle at 1px 1px, rgba(148,163,184,.08) 1px, transparent 0);
+      background-size: 18px 18px;
+    }
+  </style>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans leading-relaxed">
 
-    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-sm border-b border-slate-800">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">IS</span>
-            <div class="space-x-8 text-sm font-medium">
-                <a href="#about" class="hover:text-blue-400 transition">About</a>
-                <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
-                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
-                <a href="mailto:ins28@scarletmail.rutgers.edu" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-500 transition">Contact</a>
-            </div>
+<body class="bg-slate-950 text-slate-100 font-sans leading-relaxed bg-grid">
+
+  <!-- Top Nav -->
+  <nav class="fixed w-full z-50 bg-slate-950/75 backdrop-blur border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3">
+        <span class="h-9 w-9 grid place-items-center rounded-xl bg-gradient-to-br from-blue-500 to-teal-400 text-slate-950 font-extrabold">
+          IS
+        </span>
+        <span class="hidden sm:block font-semibold tracking-wide text-slate-200">Isha Shah</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-blue-400 transition">About</a>
+        <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+        <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+        <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+        <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+        <a href="mailto:ins28@scarletmail.rutgers.edu"
+           class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition">
+          Email Me
+        </a>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-800/60 transition" aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-800 bg-slate-950/95">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-blue-400 transition">About</a>
+        <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+        <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+        <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+        <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+        <a href="mailto:ins28@scarletmail.rutgers.edu"
+           class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition inline-flex items-center justify-center gap-2">
+          <i class="fa-solid fa-envelope"></i> Email Me
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="top" class="pt-28 pb-16 px-6">
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-wider text-slate-300 bg-slate-900/50 border border-slate-800 px-3 py-2 rounded-full">
+          <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+          Open to Summer 2026 Internships
         </div>
-    </nav>
 
-    <header id="about" class="pt-32 pb-20 px-6 max-w-5xl mx-auto">
-        <div class="flex flex-col md:flex-row items-center gap-12">
-            <div class="flex-1 text-center md:text-left">
-                <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Isha Shah</h1>
-                <p class="text-xl text-blue-400 mb-4 font-semibold">MS in Computer Science @ Rutgers University</p>
-                <p class="text-slate-400 text-lg mb-8 max-w-xl">
-                    Specializing in AI and Machine Learning. Passionate about building intelligent systems, from deep learning behavioral monitors to RAG-based legal assistants.
-                </p>
-                <div class="flex justify-center md:justify-start gap-5 text-2xl">
-                    <a href="https://github.com/Ishashah2303" class="hover:text-blue-400 transition"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/isha-shah2303" class="hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:ins28@scarletmail.rutgers.edu" class="hover:text-blue-400 transition"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
+        <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+          I build <span class="bg-gradient-to-r from-blue-400 to-teal-300 bg-clip-text text-transparent">AI-powered products</span><br />
+          that ship.
+        </h1>
+
+        <p class="mt-5 text-slate-300 text-lg max-w-2xl">
+          I’m <span class="text-slate-100 font-semibold">Isha Shah</span>, an MS Computer Science student at Rutgers University.
+          I work across <span class="text-slate-100 font-semibold">LLMs/RAG</span>, deep learning, and full-stack engineering
+          (React + Flask) to turn ideas into user-ready tools.
+        </p>
+
+        <div class="mt-7 flex flex-wrap items-center gap-3">
+          <a href="#projects"
+             class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 transition px-5 py-3 rounded-xl font-semibold">
+            <i class="fa-solid fa-rocket"></i> View Projects
+          </a>
+
+          <!-- Put your resume pdf in repo: /assets/Isha_Shah_Resume.pdf -->
+          <a href="assets/Isha_Shah_Resume.pdf"
+             class="inline-flex items-center gap-2 bg-slate-900/60 hover:bg-slate-800 transition border border-slate-700 px-5 py-3 rounded-xl font-semibold">
+            <i class="fa-solid fa-file-arrow-down"></i> Resume
+          </a>
+
+          <a href="mailto:ins28@scarletmail.rutgers.edu"
+             class="inline-flex items-center gap-2 bg-slate-900/30 hover:bg-slate-800 transition border border-slate-800 px-5 py-3 rounded-xl font-semibold">
+            <i class="fa-solid fa-paper-plane"></i> Let’s Talk
+          </a>
         </div>
-    </header>
 
-    <section class="bg-slate-800/50 py-16 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-2xl font-bold mb-10">Technical Toolkit</h2>
-            <div class="flex flex-wrap justify-center gap-3">
-                <span class="bg-slate-700 px-4 py-2 rounded-full text-sm border border-slate-600">Python</span>
-                <span class="bg-slate-700 px-4 py-2 rounded-full text-sm border border-slate-600">React</span>
-                <span class="bg-slate-700 px-4 py-2 rounded-full text-sm border border-slate-600">TensorFlow</span>
-                <span class="bg-slate-700 px-4 py-2 rounded-full text-sm border border-slate-600">Flask</span>
-                <span class="bg-slate-700 px-4 py-2 rounded-full text-sm border border-slate-600">GenAI / LLMs</span>
-                <span class="bg-slate-700 px-4 py-2 rounded-full text-sm border border-slate-600">Langchain</span>
-                <span class="bg-slate-700 px-4 py-2 rounded-full text-sm border border-slate-600">SQL / MongoDB</span>
-            </div>
+        <div class="mt-8 flex items-center gap-5 text-2xl text-slate-300">
+          <a href="https://github.com/Ishashah2303" class="hover:text-blue-400 transition" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/isha-shah2303" class="hover:text-blue-400 transition" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:ins28@scarletmail.rutgers.edu" class="hover:text-blue-400 transition" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
         </div>
-    </section>
+      </div>
 
-    <section id="experience" class="py-20 px-6 max-w-5xl mx-auto">
-        <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
-            <span class="h-px w-12 bg-blue-500"></span> Experience
-        </h2>
-        <div class="space-y-12">
-            <div class="relative pl-8 border-l-2 border-slate-800">
-                <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1"></div>
-                <h3 class="text-xl font-bold">Software Developer Intern</h3>
-                <p class="text-blue-400">Marcos Quay | Aug 2024 - Oct 2024</p>
-                <p class="text-slate-400 mt-2">Redesigned and redeveloped company website, managing full-stack development, hosting, and security for improved user experience.</p>
+      <!-- Right Card -->
+      <div class="lg:col-span-5">
+        <div class="rounded-3xl border border-slate-800 bg-slate-900/35 p-6 shadow-xl shadow-slate-950/40">
+          <h2 class="text-lg font-bold">Currently</h2>
+          <div class="mt-4 space-y-4 text-sm text-slate-300">
+            <div class="flex gap-3">
+              <i class="fa-solid fa-graduation-cap mt-1 text-blue-400"></i>
+              <div>
+                <p class="font-semibold text-slate-100">MS Computer Science @ Rutgers</p>
+                <p class="text-slate-400">AI + Systems + Data-driven apps</p>
+              </div>
             </div>
-            <div class="relative pl-8 border-l-2 border-slate-800">
-                <div class="absolute w-4 h-4 bg-slate-700 rounded-full -left-[9px] top-1"></div>
-                <h3 class="text-xl font-bold">Vice Captain (Non-Tech)</h3>
-                <p class="text-blue-400">DJS Astra | Aug 2023 - Aug 2024</p>
-                <p class="text-slate-400 mt-2">Directed a multidisciplinary team of 10 for combat robotics development and strategic planning.</p>
+
+            <div class="flex gap-3">
+              <i class="fa-solid fa-shield-halved mt-1 text-blue-400"></i>
+              <div>
+                <p class="font-semibold text-slate-100">Interested in</p>
+                <p class="text-slate-400">Reliable LLM apps, RAG evaluation, human-centered AI</p>
+              </div>
             </div>
+
+            <div class="flex gap-3">
+              <i class="fa-solid fa-code mt-1 text-blue-400"></i>
+              <div>
+                <p class="font-semibold text-slate-100">Stack</p>
+                <p class="text-slate-400">Python, React, Flask, LangChain, SQL/MongoDB</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 grid grid-cols-3 gap-3 text-center">
+            <div class="rounded-2xl bg-slate-950/40 border border-slate-800 p-3">
+              <p class="text-xl font-extrabold text-slate-100">3+</p>
+              <p class="text-xs text-slate-400">AI Products</p>
+            </div>
+            <div class="rounded-2xl bg-slate-950/40 border border-slate-800 p-3">
+              <p class="text-xl font-extrabold text-slate-100">2+</p>
+              <p class="text-xs text-slate-400">Leadership Roles</p>
+            </div>
+            <div class="rounded-2xl bg-slate-950/40 border border-slate-800 p-3">
+              <p class="text-xl font-extrabold text-slate-100">1</p>
+              <p class="text-xs text-slate-400">Internship</p>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </header>
 
-    <section id="projects" class="py-20 px-6 max-w-5xl mx-auto">
-        <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
-            <span class="h-px w-12 bg-blue-500"></span> Featured Work
-        </h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="group bg-slate-800 p-8 rounded-2xl hover:bg-slate-750 border border-slate-700 transition duration-300">
-                <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-400 transition">LegalAI Analyzer</h3>
-                <p class="text-slate-400 mb-6 text-sm">AI platform using Langchain and Gemini to summarize contracts and draft legal documents using RAG.</p>
-                <div class="flex gap-2">
-                    <span class="text-[10px] uppercase tracking-wider font-bold text-blue-400">React</span>
-                    <span class="text-[10px] uppercase tracking-wider font-bold text-blue-400">Langchain</span>
-                </div>
-            </div>
-            <div class="group bg-slate-800 p-8 rounded-2xl hover:bg-slate-750 border border-slate-700 transition duration-300">
-                <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-400 transition">EmotiSense</h3>
-                <p class="text-slate-400 mb-6 text-sm">Real-time emotional distress detection system using LSTM and CNN for specially-abled individuals.</p>
-                <div class="flex gap-2">
-                    <span class="text-[10px] uppercase tracking-wider font-bold text-blue-400">Deep Learning</span>
-                    <span class="text-[10px] uppercase tracking-wider font-bold text-blue-400">Flask</span>
-                </div>
-            </div>
+  <!-- About -->
+  <section id="about" class="py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-4 mb-10">
+        <span class="h-px w-12 bg-blue-500"></span>
+        <h2 class="text-3xl font-bold">About</h2>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-8">
+        <div class="md:col-span-8 rounded-3xl border border-slate-800 bg-slate-900/30 p-8">
+          <p class="text-slate-300 text-lg leading-relaxed">
+            I enjoy building AI systems that feel trustworthy and useful in the real world —
+            not just demos. My work spans <span class="text-slate-100 font-semibold">LLM workflows</span>
+            (RAG, prompting, tool-based agents), <span class="text-slate-100 font-semibold">deep learning</span>
+            (audio/video), and <span class="text-slate-100 font-semibold">full-stack engineering</span>
+            (React + Flask).
+          </p>
+          <p class="mt-4 text-slate-400">
+            Recent work includes an AI legal document analyzer (contract summarization + clause extraction),
+            an EdTech platform for lesson planning and content generation, and a real-time behavior monitoring system.
+          </p>
         </div>
-    </section>
 
-    <footer class="text-center py-10 border-t border-slate-800 text-slate-500 text-sm">
-        <p>&copy; 2026 Isha Shah. Built with Tailwind CSS and GitHub Pages.</p>
-    </footer>
+        <div class="md:col-span-4 rounded-3xl border border-slate-800 bg-slate-900/30 p-8">
+          <h3 class="text-lg font-bold">Quick Info</h3>
+          <ul class="mt-4 space-y-3 text-sm text-slate-300">
+            <li class="flex gap-3"><i class="fa-solid fa-location-dot text-blue-400 mt-1"></i> New Jersey, USA</li>
+            <li class="flex gap-3"><i class="fa-solid fa-school text-blue-400 mt-1"></i> Rutgers University–New Brunswick</li>
+            <li class="flex gap-3"><i class="fa-solid fa-envelope text-blue-400 mt-1"></i> ins28@scarletmail.rutgers.edu</li>
+            <li class="flex gap-3"><i class="fa-solid fa-link text-blue-400 mt-1"></i> github.com/Ishashah2303</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-16 px-6 bg-slate-900/25 border-y border-slate-800">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-4 mb-10">
+        <span class="h-px w-12 bg-blue-500"></span>
+        <h2 class="text-3xl font-bold">Skills</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-3xl border border-slate-800 bg-slate-950/25 p-6">
+          <h3 class="font-bold text-slate-100">AI / ML</h3>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-xs border border-slate-700 bg-slate-900/50">LLMs / GenAI</span>
+            <span class="px-3 py-1 rounded-full text-xs border border-slate-700 bg-slate-900/50">RAG</span>
+            <span class="px-3 py-1 rounded-full text-xs border border-slate-700 bg-slate-900/50">LangChain</span>
+            <span class="px-3 py-1 rounded-full text-xs border border-slate-700 bg-slate-900/50">TensorFlow / Keras</span>
+            <span class="px-3 py-1 rounded-full text-xs border border-slate-700 bg-slate-900/50">Transformers</span>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-slate-800 bg-slate-950/25 p-6">
+          <h3 class="font-bold text-slate-100">Full-Stack</h3>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-xs border border-slate-700 bg-slate-900/50">React</span>
+            <span class="px-3 py-1 rounded-full text-xs border border-slate-700 bg-slate-900/50">HTML / CSS</span>
+            <span class="px-3 py-1 rounded-full text-xs border border-slate-700 bg-slate-900/50">Flask</span>
+            <span class="px-3 py-1 rounded-full text-xs border border-slate-700 bg-slate-900/50">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-slate-800 bg-slate-950/25 p-6">
+          <h3 class="font-bold text-slate-100">Data / Tools</h3>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-xs border border-slate-700 bg-slate-900/50">Python</span>
+            <span class="px-3 py-1 rounded-full text-xs border border-slate-700 bg-slate-900/50">SQL</span>
+            <span class="px-3 py-1 rounded-full text-xs border border-slate-700 bg-slate-900/50">MongoDB</span>
+            <span class="px-3 py-1 rounded-full text-xs border border-slate-700 bg-slate-900/50">Docker</span>
+            <span class="px-3 py-1 rounded-full text-xs border border-slate-700 bg-slate-900/50">Git/GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-4 mb-10">
+        <span class="h-px w-12 bg-blue-500"></span>
+        <h2 class="text-3xl font-bold">Experience</h2>
+      </div>
+
+      <div class="space-y-10">
+        <!-- Marcos Quay -->
+        <div class="relative pl-8 border-l border-slate-800">
+          <span class="absolute -left-[7px] top-1 h-3 w-3 rounded-full bg-blue-500"></span>
+          <h3 class="text-xl font-bold">Software Developer Intern</h3>
+          <p class="text-blue-400 font-medium">Marcos Quay · Aug 2024 – Oct 2024</p>
+          <p class="mt-2 text-slate-400">
+            Redesigned and redeveloped the company website end-to-end, improving responsiveness and user experience,
+            and handling hosting/deployment + security. :contentReference[oaicite:1]{index=1}
+          </p>
+        </div>
+
+        <!-- DJS Astra -->
+        <div class="relative pl-8 border-l border-slate-800">
+          <span class="absolute -left-[7px] top-1 h-3 w-3 rounded-full bg-slate-600"></span>
+          <h3 class="text-xl font-bold">Vice Captain (Non-Tech)</h3>
+          <p class="text-blue-400 font-medium">DJS Astra · Aug 2023 – Aug 2024</p>
+          <p class="mt-2 text-slate-400">
+            Led a multidisciplinary team of 10 in combat robotics development and competition planning, coordinating execution and teamwork. :contentReference[oaicite:2]{index=2}
+          </p>
+        </div>
+
+        <!-- Optional: Add your current ODS role if you want -->
+        <!--
+        <div class="relative pl-8 border-l border-slate-800">
+          <span class="absolute -left-[7px] top-1 h-3 w-3 rounded-full bg-slate-600"></span>
+          <h3 class="text-xl font-bold">Exam Proctor (On-Campus)</h3>
+          <p class="text-blue-400 font-medium">Rutgers ODS · Oct 2025 – Present</p>
+          <p class="mt-2 text-slate-400">
+            Proctor exams with accommodations, maintain confidentiality and integrity, coordinate with faculty and staff.
+          </p>
+        </div>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-4 mb-10">
+        <span class="h-px w-12 bg-blue-500"></span>
+        <h2 class="text-3xl font-bold">Featured Projects</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- LegalAI -->
+        <article class="group rounded-3xl border border-slate-800 bg-slate-900/30 p-7 hover:bg-slate-900/55 transition">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-2xl font-bold group-hover:text-blue-400 transition">LegalAI — Document Analyzer</h3>
+            <span class="text-xs text-slate-300 border border-slate-700 bg-slate-950/30 px-3 py-1 rounded-full">
+              GenAI / RAG
+            </span>
+          </div>
+          <p class="mt-3 text-slate-400">
+            AI platform that summarizes contracts and extracts key clauses, obligations, and deadlines,
+            with a chatbot + RAG-based drafting workflow. :contentReference[oaicite:3]{index=3}
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs">
+            <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">React</span>
+            <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">Flask</span>
+            <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">LangChain</span>
+            <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">Gemini</span>
+            <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">MongoDB</span>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="https://github.com/Ishashah2303"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-slate-200 hover:text-blue-400 transition">
+              <i class="fa-brands fa-github"></i> Code
+            </a>
+            <!-- Add demo link when ready -->
+            <!-- <a href="#" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-200 hover:text-blue-400 transition">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+            </a> -->
+          </div>
+        </article>
+
+        <!-- AcademIQ -->
+        <article class="group rounded-3xl border border-slate-800 bg-slate-900/30 p-7 hover:bg-slate-900/55 transition">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-2xl font-bold group-hover:text-blue-400 transition">AcademIQ — EdTech Platform</h3>
+            <span class="text-xs text-slate-300 border border-slate-700 bg-slate-950/30 px-3 py-1 rounded-full">
+              Product + Full-Stack
+            </span>
+          </div>
+          <p class="mt-3 text-slate-400">
+            AI-driven education platform for lesson planning, multimodal content generation, and on-demand course creation. :contentReference[oaicite:4]{index=4}
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs">
+            <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">Flask</span>
+            <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">React / Chakra UI</span>
+            <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">Gemini</span>
+            <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">SQL</span>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="https://github.com/Ishashah2303"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-slate-200 hover:text-blue-400 transition">
+              <i class="fa-brands fa-github"></i> Code
+            </a>
+          </div>
+        </article>
+
+        <!-- EmotiSense -->
+        <article class="group rounded-3xl border border-slate-800 bg-slate-900/30 p-7 hover:bg-slate-900/55 transition md:col-span-2">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-2xl font-bold group-hover:text-blue-400 transition">EmotiSense — AI-driven Behavior Monitoring</h3>
+            <span class="text-xs text-slate-300 border border-slate-700 bg-slate-950/30 px-3 py-1 rounded-full">
+              Deep Learning
+            </span>
+          </div>
+          <p class="mt-3 text-slate-400">
+            Real-time emotional distress detection for specially-abled individuals using LSTM + CNN with audio-visual analysis,
+            plus personalized reporting. :contentReference[oaicite:5]{index=5}
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs">
+            <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">Python</span>
+            <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">TensorFlow/Keras</span>
+            <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">Flask</span>
+            <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">HTML/CSS/JS</span>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="https://github.com/Ishashah2303"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-slate-200 hover:text-blue-400 transition">
+              <i class="fa-brands fa-github"></i> Code
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-6 bg-slate-900/25 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto">
+      <div class="rounded-3xl border border-slate-800 bg-slate-950/35 p-10">
+        <h2 class="text-3xl font-extrabold">Let’s build something useful.</h2>
+        <p class="mt-3 text-slate-300 max-w-2xl">
+          If you’re hiring for AI/ML, data, or full-stack roles — or want to collaborate on an LLM/RAG product —
+          I’d love to connect.
+        </p>
+
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="mailto:ins28@scarletmail.rutgers.edu"
+             class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 transition px-5 py-3 rounded-xl font-semibold">
+            <i class="fa-solid fa-envelope"></i> Email
+          </a>
+          <a href="https://linkedin.com/in/isha-shah2303"
+             class="inline-flex items-center gap-2 bg-slate-900/60 hover:bg-slate-800 transition border border-slate-700 px-5 py-3 rounded-xl font-semibold">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/Ishashah2303"
+             class="inline-flex items-center gap-2 bg-slate-900/30 hover:bg-slate-800 transition border border-slate-800 px-5 py-3 rounded-xl font-semibold">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <p class="text-center text-slate-500 text-sm mt-10">
+        &copy; 2026 Isha Shah · Built with Tailwind CSS · Hosted on GitHub Pages
+      </p>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+
+    btn.addEventListener('click', () => {
+      const isOpen = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Close menu when clicking a link
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 
 </body>
 </html>
