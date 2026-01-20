@@ -14,17 +14,15 @@
   <meta property="og:title" content="Isha Shah | AI + Full-Stack Portfolio" />
   <meta property="og:description" content="AI/ML + full-stack builder. Projects in RAG-based legal assistants, EdTech automation, and real-time behavior monitoring." />
   <meta property="og:type" content="website" />
-  <!-- Optional: set once you add an image in your repo -->
+  <!-- Optional: once you add og image in repo -->
   <!-- <meta property="og:image" content="https://ishashah2303.github.io/assets/og.png" /> -->
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 
   <style>
-    /* Smooth scrolling + nicer selection */
     html { scroll-behavior: smooth; }
     ::selection { background: rgba(59, 130, 246, 0.35); }
-    /* Subtle gradient background noise */
     .bg-grid {
       background-image:
         radial-gradient(circle at 1px 1px, rgba(148,163,184,.08) 1px, transparent 0);
@@ -59,7 +57,8 @@
       </div>
 
       <!-- Mobile Button -->
-      <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-800/60 transition" aria-label="Open menu" aria-expanded="false">
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-800/60 transition"
+              aria-label="Open menu" aria-expanded="false">
         <i class="fa-solid fa-bars text-xl"></i>
       </button>
     </div>
@@ -83,6 +82,7 @@
   <!-- Hero -->
   <header id="top" class="pt-28 pb-16 px-6">
     <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-10 items-start">
+      <!-- Left -->
       <div class="lg:col-span-7">
         <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-wider text-slate-300 bg-slate-900/50 border border-slate-800 px-3 py-2 rounded-full">
           <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
@@ -106,7 +106,6 @@
             <i class="fa-solid fa-rocket"></i> View Projects
           </a>
 
-          <!-- Put your resume pdf in repo: /assets/Isha_Shah_Resume.pdf -->
           <a href="assets/Isha_Shah_Resume.pdf"
              class="inline-flex items-center gap-2 bg-slate-900/60 hover:bg-slate-800 transition border border-slate-700 px-5 py-3 rounded-xl font-semibold">
             <i class="fa-solid fa-file-arrow-down"></i> Resume
@@ -130,71 +129,69 @@
           </a>
         </div>
       </div>
+
+      <!-- Right -->
+      <div class="lg:col-span-5 flex flex-col items-center gap-6 lg:items-end lg:justify-start lg:pt-6">
+        <!-- Photo -->
+        <div class="relative">
+          <div class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/35 to-teal-400/25 blur-2xl"></div>
+          <img
+            src="assets/isha.JPG"
+            alt="Isha Shah portrait"
+            class="relative w-40 h-40 md:w-44 md:h-44 rounded-full object-cover border border-slate-700/70 shadow-2xl shadow-slate-950/60"
+          />
+        </div>
+
+        <div class="hidden lg:block w-full lg:max-w-md h-px bg-slate-800/70"></div>
+
+        <!-- Currently Card -->
+        <div class="w-full lg:max-w-md rounded-3xl border border-slate-700/60 bg-slate-900/25 backdrop-blur p-6 shadow-2xl shadow-slate-950/50">
+          <h2 class="text-lg font-bold">Currently</h2>
+
+          <div class="mt-4 space-y-5 text-[13px] text-slate-300">
+            <div class="flex gap-3">
+              <i class="fa-solid fa-graduation-cap mt-1 text-blue-400"></i>
+              <div>
+                <p class="font-semibold text-slate-100">MS Computer Science @ Rutgers</p>
+                <p class="text-slate-400">AI + Systems + Data-driven apps</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <i class="fa-solid fa-shield-halved mt-1 text-blue-400"></i>
+              <div>
+                <p class="font-semibold text-slate-100 tracking-wide">Interested in</p>
+                <p class="text-slate-400">Reliable LLM apps, RAG evaluation, human-centered AI</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <i class="fa-solid fa-code mt-1 text-blue-400"></i>
+              <div>
+                <p class="font-semibold text-slate-100 tracking-wide">Stack</p>
+                <p class="text-slate-400">Python, React, Flask, LangChain, SQL/MongoDB</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 grid grid-cols-3 gap-3 text-center">
+            <div class="rounded-2xl bg-slate-950/35 border border-slate-800 p-3">
+              <p class="text-lg font-extrabold text-slate-100 leading-none">3+</p>
+              <p class="text-[11px] text-slate-400 mt-1">AI Products</p>
+            </div>
+            <div class="rounded-2xl bg-slate-950/35 border border-slate-800 p-3">
+              <p class="text-lg font-extrabold text-slate-100 leading-none">2+</p>
+              <p class="text-[11px] text-slate-400 mt-1">Leadership</p>
+            </div>
+            <div class="rounded-2xl bg-slate-950/35 border border-slate-800 p-3">
+              <p class="text-lg font-extrabold text-slate-100 leading-none">1</p>
+              <p class="text-[11px] text-slate-400 mt-1">Internship</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
-
-      <!-- Right Card -->
-      <!-- Right Column -->
-<div class="lg:col-span-5 flex flex-col items-center gap-6">
-
-  <!-- Profile Photo -->
-  <div class="relative">
-    <div class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 to-teal-400 blur-xl opacity-30"></div>
-    <img
-      src="assets/isha.JPG"
-      alt="Isha Shah portrait"
-      class="relative w-48 h-48 rounded-full object-cover border-4 border-slate-800 shadow-xl"
-    />
-  </div>
-
-  <!-- Currently Card -->
-  <div class="w-full lg:max-w-md rounded-3xl border border-slate-800 bg-slate-900/35 p-6 shadow-xl shadow-slate-950/40">
-    <h2 class="text-lg font-bold">Currently</h2>
-
-    <div class="mt-4 space-y-4 text-sm text-slate-300">
-      <div class="flex gap-3">
-        <i class="fa-solid fa-graduation-cap mt-1 text-blue-400"></i>
-        <div>
-          <p class="font-semibold text-slate-100">MS Computer Science @ Rutgers</p>
-          <p class="text-slate-400">AI + Systems + Data-driven apps</p>
-        </div>
-      </div>
-
-      <div class="flex gap-3">
-        <i class="fa-solid fa-shield-halved mt-1 text-blue-400"></i>
-        <div>
-          <p class="font-semibold text-slate-100">Interested in</p>
-          <p class="text-slate-400">Reliable LLM apps, RAG evaluation, human-centered AI</p>
-        </div>
-      </div>
-
-      <div class="flex gap-3">
-        <i class="fa-solid fa-code mt-1 text-blue-400"></i>
-        <div>
-          <p class="font-semibold text-slate-100">Stack</p>
-          <p class="text-slate-400">Python, React, Flask, LangChain, SQL/MongoDB</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-6 grid grid-cols-3 gap-3 text-center">
-      <div class="rounded-2xl bg-slate-950/40 border border-slate-800 p-3">
-        <p class="text-lg font-extrabold text-slate-100 leading-none">3+</p>
-        <p class="text-[11px] text-slate-400 mt-1">AI Products</p>
-      </div>
-      <div class="rounded-2xl bg-slate-950/40 border border-slate-800 p-3">
-        <p class="text-lg font-extrabold text-slate-100 leading-none">2+</p>
-        <p class="text-[11px] text-slate-400 mt-1">Leadership</p>
-      </div>
-      <div class="rounded-2xl bg-slate-950/40 border border-slate-800 p-3">
-        <p class="text-lg font-extrabold text-slate-100 leading-none">1</p>
-        <p class="text-[11px] text-slate-400 mt-1">Internship</p>
-      </div>
-    </div>
-
-    </div>
-  </div>
-</div>
 
   <!-- About -->
   <section id="about" class="py-16 px-6">
@@ -207,14 +204,13 @@
       <div class="grid md:grid-cols-12 gap-8">
         <div class="md:col-span-8 rounded-3xl border border-slate-800 bg-slate-900/30 p-8">
           <p class="text-slate-300 text-lg leading-relaxed">
-            I enjoy building AI systems that feel trustworthy and useful in the real world —
-            not just demos. My work spans <span class="text-slate-100 font-semibold">LLM workflows</span>
-            (RAG, prompting, tool-based agents), <span class="text-slate-100 font-semibold">deep learning</span>
-            (audio/video), and <span class="text-slate-100 font-semibold">full-stack engineering</span>
-            (React + Flask).
+            I enjoy building AI systems that feel trustworthy and useful in the real world — not just demos.
+            My work spans <span class="text-slate-100 font-semibold">LLM workflows</span> (RAG, prompting, tool-based agents),
+            <span class="text-slate-100 font-semibold">deep learning</span> (audio/video), and
+            <span class="text-slate-100 font-semibold">full-stack engineering</span> (React + Flask).
           </p>
           <p class="mt-4 text-slate-400">
-            Recent work includes an AI legal document analyzer (contract summarization + clause extraction),
+            Recent work includes a legal document analyzer (summarization + clause extraction),
             an EdTech platform for lesson planning and content generation, and a real-time behavior monitoring system.
           </p>
         </div>
@@ -277,65 +273,64 @@
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="py-20 px-6 max-w-5xl mx-auto">
-  <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
-    <span class="h-px w-12 bg-blue-500"></span> Experience
-  </h2>
+  <section id="experience" class="py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-4 mb-10">
+        <span class="h-px w-12 bg-blue-500"></span>
+        <h2 class="text-3xl font-bold">Experience</h2>
+      </div>
 
-  <div class="space-y-12">
+      <div class="space-y-12">
+        <!-- Exam Proctor -->
+        <div class="relative pl-8 border-l border-slate-800">
+          <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1"></div>
+          <h3 class="text-xl font-bold">Exam Proctor (On-Campus)</h3>
+          <p class="text-blue-400 font-medium">Rutgers University · Office of Disability Services (ODS)</p>
+          <p class="text-slate-400 text-sm mt-1">Oct 2025 – Present</p>
+          <p class="text-slate-400 mt-3">
+            Proctor exams with approved accommodations, coordinate logistics with staff and faculty,
+            and ensure confidentiality, fairness, and exam integrity in a high-trust environment.
+          </p>
+        </div>
 
-    <!-- Exam Proctor -->
-    <div class="relative pl-8 border-l border-slate-800">
-      <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1"></div>
-      <h3 class="text-xl font-bold">Exam Proctor (On-Campus)</h3>
-      <p class="text-blue-400 font-medium">
-        Rutgers University · Office of Disability Services (ODS)
-      </p>
-      <p class="text-slate-400 text-sm mt-1">Oct 2025 – Present</p>
-      <p class="text-slate-400 mt-3">
-        Proctor exams with approved accommodations, coordinate logistics with staff and faculty,
-        and ensure confidentiality, fairness, and exam integrity in a high-trust environment.
-      </p>
+        <!-- Software Developer Intern -->
+        <div class="relative pl-8 border-l border-slate-800">
+          <div class="absolute w-4 h-4 bg-slate-600 rounded-full -left-[9px] top-1"></div>
+          <h3 class="text-xl font-bold">Software Developer Intern</h3>
+          <p class="text-blue-400 font-medium">Marcos Quay</p>
+          <p class="text-slate-400 text-sm mt-1">Aug 2024 – Oct 2024</p>
+          <p class="text-slate-400 mt-3">
+            Redesigned and redeveloped the company website end-to-end, improving responsiveness and user experience,
+            and managing hosting, deployment, and basic security configurations.
+          </p>
+        </div>
+
+        <!-- Vice Captain -->
+        <div class="relative pl-8 border-l border-slate-800">
+          <div class="absolute w-4 h-4 bg-slate-600 rounded-full -left-[9px] top-1"></div>
+          <h3 class="text-xl font-bold">Vice Captain (Non-Tech)</h3>
+          <p class="text-blue-400 font-medium">DJS Astra</p>
+          <p class="text-slate-400 text-sm mt-1">Aug 2023 – Aug 2024</p>
+          <p class="text-slate-400 mt-3">
+            Led a multidisciplinary team of 10 for combat robotics development and competition planning,
+            coordinating execution, logistics, and cross-team collaboration.
+          </p>
+        </div>
+
+        <!-- NSS Nova -->
+        <div class="relative pl-8 border-l border-slate-800">
+          <div class="absolute w-4 h-4 bg-slate-600 rounded-full -left-[9px] top-1"></div>
+          <h3 class="text-xl font-bold">Community Service Coordinator</h3>
+          <p class="text-blue-400 font-medium">NSS Nova · DJSCE</p>
+          <p class="text-slate-400 text-sm mt-1">Aug 2022 – May 2023</p>
+          <p class="text-slate-400 mt-3">
+            Coordinated community initiatives and volunteer operations, managed event planning and team communication,
+            and supported large-scale outreach programs.
+          </p>
+        </div>
+      </div>
     </div>
-
-    <!-- Software Developer Intern -->
-    <div class="relative pl-8 border-l border-slate-800">
-      <div class="absolute w-4 h-4 bg-slate-600 rounded-full -left-[9px] top-1"></div>
-      <h3 class="text-xl font-bold">Software Developer Intern</h3>
-      <p class="text-blue-400 font-medium">Marcos Quay</p>
-      <p class="text-slate-400 text-sm mt-1">Aug 2024 – Oct 2024</p>
-      <p class="text-slate-400 mt-3">
-        Redesigned and redeveloped the company website end-to-end, improving responsiveness and user experience,
-        and managing hosting, deployment, and basic security configurations.
-      </p>
-    </div>
-
-    <!-- Vice Captain -->
-    <div class="relative pl-8 border-l border-slate-800">
-      <div class="absolute w-4 h-4 bg-slate-600 rounded-full -left-[9px] top-1"></div>
-      <h3 class="text-xl font-bold">Vice Captain (Non-Tech)</h3>
-      <p class="text-blue-400 font-medium">DJS Astra</p>
-      <p class="text-slate-400 text-sm mt-1">Aug 2023 – Aug 2024</p>
-      <p class="text-slate-400 mt-3">
-        Led a multidisciplinary team of 10 for combat robotics development and competition planning,
-        coordinating execution, logistics, and cross-team collaboration.
-      </p>
-    </div>
-
-    <!-- NSS Nova -->
-    <div class="relative pl-8 border-l border-slate-800">
-      <div class="absolute w-4 h-4 bg-slate-600 rounded-full -left-[9px] top-1"></div>
-      <h3 class="text-xl font-bold">Community Service Coordinator</h3>
-      <p class="text-blue-400 font-medium">NSS Nova · DJSCE</p>
-      <p class="text-slate-400 text-sm mt-1">Aug 2022 – May 2023</p>
-      <p class="text-slate-400 mt-3">
-        Coordinated community initiatives and volunteer operations, managed event planning and team communication,
-        and supported large-scale outreach programs.
-      </p>
-    </div>
-
-  </div>
-</section>
+  </section>
 
   <!-- Projects -->
   <section id="projects" class="py-16 px-6">
@@ -355,8 +350,7 @@
             </span>
           </div>
           <p class="mt-3 text-slate-400">
-            AI platform that summarizes contracts and extracts key clauses, obligations, and deadlines,
-            with a chatbot + RAG-based drafting workflow. :contentReference[oaicite:3]{index=3}
+            Summarizes contracts and extracts key clauses, obligations, and deadlines, with a chatbot + RAG-based drafting workflow.
           </p>
           <div class="mt-5 flex flex-wrap gap-2 text-xs">
             <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">React</span>
@@ -370,10 +364,6 @@
                class="inline-flex items-center gap-2 text-sm font-semibold text-slate-200 hover:text-blue-400 transition">
               <i class="fa-brands fa-github"></i> Code
             </a>
-            <!-- Add demo link when ready -->
-            <!-- <a href="#" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-200 hover:text-blue-400 transition">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-            </a> -->
           </div>
         </article>
 
@@ -386,11 +376,11 @@
             </span>
           </div>
           <p class="mt-3 text-slate-400">
-            AI-driven education platform for lesson planning, multimodal content generation, and on-demand course creation. :contentReference[oaicite:4]{index=4}
+            AI-driven platform for lesson planning, content generation, and on-demand course creation for students and faculty.
           </p>
           <div class="mt-5 flex flex-wrap gap-2 text-xs">
             <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">Flask</span>
-            <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">React / Chakra UI</span>
+            <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">React</span>
             <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">Gemini</span>
             <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">SQL</span>
           </div>
@@ -405,14 +395,13 @@
         <!-- EmotiSense -->
         <article class="group rounded-3xl border border-slate-800 bg-slate-900/30 p-7 hover:bg-slate-900/55 transition md:col-span-2">
           <div class="flex items-start justify-between gap-4">
-            <h3 class="text-2xl font-bold group-hover:text-blue-400 transition">EmotiSense — AI-driven Behavior Monitoring</h3>
+            <h3 class="text-2xl font-bold group-hover:text-blue-400 transition">EmotiSense — Behavior Monitoring</h3>
             <span class="text-xs text-slate-300 border border-slate-700 bg-slate-950/30 px-3 py-1 rounded-full">
               Deep Learning
             </span>
           </div>
           <p class="mt-3 text-slate-400">
-            Real-time emotional distress detection for specially-abled individuals using LSTM + CNN with audio-visual analysis,
-            plus personalized reporting. :contentReference[oaicite:5]{index=5}
+            Real-time emotional distress detection using LSTM + CNN on audio-visual signals, with personalized reporting.
           </p>
           <div class="mt-5 flex flex-wrap gap-2 text-xs">
             <span class="px-3 py-1 rounded-full border border-slate-700 bg-slate-950/30">Python</span>
